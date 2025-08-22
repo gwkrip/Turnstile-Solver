@@ -54,7 +54,7 @@ class TurnstileAPI:
             from hypercorn.config import Config
 
             config = Config()
-            config.bind = ["0.0.0.0:5000"]
+            config.bind = ["0.0.0.0:7860"]
             await hypercorn.asyncio.serve(app, config)
         except Exception as e:
             logger.error(f"API server failed to start: {str(e)}")
